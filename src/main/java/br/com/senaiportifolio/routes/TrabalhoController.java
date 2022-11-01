@@ -13,7 +13,7 @@ import br.com.senaiportifolio.services.TrabalhoServiceImpl;
 
 @RestController
 @RequestMapping("api")
-@CrossOrigin(value = "http://localhost:3000")
+@CrossOrigin(value = "https://eduardoportifolio.netlify.app")
 public class TrabalhoController {
 
     private final TrabalhoServiceImpl trabalhoService;
@@ -35,7 +35,7 @@ public class TrabalhoController {
     @GetMapping("/findAll")
     public ResponseEntity<List<Trabalho>> findAllTrabalhos(){
         return ResponseEntity.ok(trabalhoService.findAllTrabalhos());
-    }
+    }♣
 
     @GetMapping("/findTrabalhosBySubject/subject={subject}")
     public ResponseEntity<List<Trabalho>> findAllTrabalhoBySubject(@PathVariable("subject") String subject){
