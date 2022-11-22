@@ -35,7 +35,7 @@ public class TrabalhoController {
     @GetMapping("/findAll")
     public ResponseEntity<List<Trabalho>> findAllTrabalhos(){
         return ResponseEntity.ok(trabalhoService.findAllTrabalhos());
-    }♣
+    }
 
     @GetMapping("/findTrabalhosBySubject/subject={subject}")
     public ResponseEntity<List<Trabalho>> findAllTrabalhoBySubject(@PathVariable("subject") String subject){
@@ -68,6 +68,7 @@ public class TrabalhoController {
 
     }
 
+    @Deprecated
     @PutMapping("/saveTrabalhoImage/trabalho_id={trabalho_id}")
     public ResponseEntity<Trabalho> saveTrabalhoImage(@RequestParam MultipartFile imageFile,
                  @PathVariable Long trabalho_id){
@@ -81,6 +82,7 @@ public class TrabalhoController {
     
     }
 
+    @Deprecated
     @GetMapping(value = "/findTrabalhoImage/trabalho_id={trabalho_id}", produces = org.springframework.http.MediaType.IMAGE_PNG_VALUE )
     public ResponseEntity<FileSystemResource> findTrabalhoImage(@PathVariable Long trabalho_id){
         return ResponseEntity.ok(trabalhoService.findTrabalhoImage(trabalho_id));

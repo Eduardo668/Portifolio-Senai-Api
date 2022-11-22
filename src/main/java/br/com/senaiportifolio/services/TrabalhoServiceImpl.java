@@ -76,10 +76,10 @@ public class TrabalhoServiceImpl implements TrabalhoService {
 
             trabalho_data.map(trabalho -> {
                 trabalho.setImage(editedTrabalho.getImage());
-                trabalho.setDescription(editedTrabalho.getDescription());
                 trabalho.setTitle(editedTrabalho.getTitle());
                 trabalho.setSubject(editedTrabalho.getSubject());
                 trabalho.setLink(editedTrabalho.getLink());
+                trabalho.setImage_url(editedTrabalho.getImage_url());
                 return trabalho;
             });
 
@@ -90,6 +90,7 @@ public class TrabalhoServiceImpl implements TrabalhoService {
         }
     }
 
+    @Deprecated
     @Override
     public Trabalho saveTrabalhoImage(byte[] imageBytes, String imageName, Long trabalho_id) {
         try{
@@ -115,6 +116,7 @@ public class TrabalhoServiceImpl implements TrabalhoService {
         }
     }
 
+    @Deprecated
     @Override
     public FileSystemResource findTrabalhoImage(Long trabalho_id) {
         Optional<Trabalho> trabalho_data = trabalhoRepository.findById(trabalho_id);

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import br.com.senaiportifolio.models.Image;
 import br.com.senaiportifolio.repository.ImageRepository;
 
+@Deprecated
 @Service
 public class ImageServiceImpl implements ImageService {
 

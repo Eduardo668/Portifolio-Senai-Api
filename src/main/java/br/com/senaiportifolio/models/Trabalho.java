@@ -27,13 +27,14 @@ public class Trabalho implements Serializable {
     @Size(max = 100)
     private String title;
 
-    
+    @Deprecated
     @OneToOne(cascade = CascadeType.ALL)
     private Image image;
 
+    @Size(max = 500)
     @NotNull
-    @Lob
-    private String description;
+    private String image_url;
+
     
     @NotNull
     @Size(max = 100)
@@ -50,13 +51,6 @@ public class Trabalho implements Serializable {
         this.image = image;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public String getSubject() {
         return subject;
@@ -88,6 +82,13 @@ public class Trabalho implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
     

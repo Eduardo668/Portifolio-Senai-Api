@@ -18,8 +18,10 @@ public interface TrabalhoService {
 
     public Trabalho editTrabalho(Long trabalho_id, Trabalho editedTrabalho);
 
+    @Deprecated
     public Trabalho saveTrabalhoImage(byte[] imageBytes, String imageName, Long trabalho_id);
 
+    @Deprecated
     public FileSystemResource findTrabalhoImage(Long trabalho_id);
 
 }

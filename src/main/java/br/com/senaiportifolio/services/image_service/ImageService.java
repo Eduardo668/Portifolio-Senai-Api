@@ -4,6 +4,7 @@ import java.util.List;
 
 import br.com.senaiportifolio.models.Image;
 
+@Deprecated
 public interface ImageService {
 
     public Image createImage(Image newImage);

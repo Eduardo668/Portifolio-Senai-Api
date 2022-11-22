@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.senaiportifolio.models.Image;
 
+@Deprecated
 @Repository
 public interface ImageRepository extends JpaRepository<Image, Long> {
     

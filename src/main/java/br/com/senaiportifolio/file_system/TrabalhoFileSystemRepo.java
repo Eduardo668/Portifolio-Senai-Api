@@ -10,6 +10,7 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Deprecated
 public class TrabalhoFileSystemRepo {
     
     public Path currentDir = Paths.get("").toAbsolutePath();
