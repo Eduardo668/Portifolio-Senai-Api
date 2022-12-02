@@ -13,7 +13,7 @@ import br.com.senaiportifolio.services.TrabalhoServiceImpl;
 
 @RestController
 @RequestMapping("api")
-@CrossOrigin(value = "https://eduardoportifolio.netlify.app")
+@CrossOrigin(value = "*")
 public class TrabalhoController {
 
     private final TrabalhoServiceImpl trabalhoService;
